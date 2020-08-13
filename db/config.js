@@ -1,6 +1,6 @@
 const env = require('./../env')
 
-if(env === 'div') {
+if(env === 'dev') {
     module.exports = {
         host: 'localhost',
         user: 'root',

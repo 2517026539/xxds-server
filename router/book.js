@@ -3,9 +3,10 @@ const Result = require('./../models/results')
 const multer = require('multer')
 const Book = require('./../models/book')
 const Boom = require('boom')
+const { BOOKTEST_PATH } = require('./../utils/constant')
 const { verifyToken } = require('./../utils/index')
 const { createBook, getBook, updateBook, getcategories, getBookList, deleteBook} = require('./../services/book')
-const upload = multer({ dest: 'D:/upload/bookTest'})
+const upload = multer({ dest: BOOKTEST_PATH})
 
 const router = express.Router()
 
