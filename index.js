@@ -19,7 +19,10 @@ app.use('/',router)
 
 const httpsServer = https.createServer(options,app);
 
-app.listen(port, ()=>console.log('server is running on http://localhost:%s',port))
+app.listen(port, ()=>{
+    console.log('当前环境变量', process.env);
+    console.log('server is running on http://localhost:%s',port)
+})
 httpsServer.listen(18082,()=>{
     console.log('https server is running on https://localhost:18082')
 })
